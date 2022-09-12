@@ -61,8 +61,7 @@ else {
       else {
          if ($_REQUEST['event'] == 'ONAPPINSTALL') {
             // handler for events
-            $handlerBackUrl = ($_SERVER['SERVER_PORT'] == 443 ? 'https' : 'http') . '://' . $_SERVER['SERVER_NAME'] . (in_array($_SERVER['SERVER_PORT'],
-               array(80, 443)) ? '' : ':' . $_SERVER['SERVER_PORT']) . $_SERVER['SCRIPT_NAME'];
+            $handlerBackUrl = 'https://ndbc.bitrix24.ru/rest/185/ztn2kp2dpa0ajg5m/';
             // If your application supports different localizations
             // use $_REQUEST['data']['LANGUAGE_ID'] to load correct localization
             // register new bot
