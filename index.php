@@ -61,7 +61,8 @@ else {
       else {
          if ($_REQUEST['event'] == 'ONAPPINSTALL') {
             // handler for events
-            $handlerBackUrl = 'https://ndbc.bitrix24.ru/rest/185/ztn2kp2dpa0ajg5m/';
+            $handlerBackUrl = ($_SERVER['SERVER_PORT'] == 443 ? 'https' : 'http') . '://' . $_SERVER['SERVER_NAME'] . (in_array($_SERVER['SERVER_PORT'],
+               array(80, 443)) ? '' : ':' . $_SERVER['SERVER_PORT']) . $_SERVER['SCRIPT_NAME'];
             // If your application supports different localizations
             // use $_REQUEST['data']['LANGUAGE_ID'] to load correct localization
             // register new bot
@@ -230,3 +231,4 @@ function b24BadTasks ($user) {
       );
    }
    return $arReport;
+}
